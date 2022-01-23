@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<style>
+				li{
+					padding:10px;
+				}
+				p{
+					font-size:16px;
+				}
+				*{
+					background-color:#F5F7FB;
+					font-family:Helvetica,Arial,sans-serif;
+				}
+				h2
+				{
+					font-size: 1.3rem;
+				}
+				html, body{
+					
+					margin: 0;
+				}
+				h3,h4
+				{
+					font-size: 1rem;
+				}
+				div .code{
+					font-family: sans-serif;
+					color: #202020;
+					text-align: center;
+					font-size: 18px;
+				}
+				.context {
+					font-size: 12px;
+					padding: 40px 50px 40px 50px;
+					margin-left:25%;
+					margin-right:25%;
+				}
+				.text{
+					padding-left: 2rem;
+					padding-top: 2rem;
+					padding-bottom: 2rem;
+					padding-right: 2rem;
+					background-color: #FFFFFF;
+					font-size:14px;
+
+				}
+				img{
+					width:75%;
+					height:40%;
+				}
+				@media(max-width: 600px)
+				{
+					.context{
+						margin-left: 0;
+						margin-right: 0;
+
+					}
+					div .code h1{
+						font-size: 1.3rem;
+
+					}
+				}
+			</style>
+		</head>
+		<body>
+			<div class='context'>
+				
+
+				<div class="code">
+					<img src="{{img}}"></img>
+					<h1>Verification Code: <h1>{{otp}}</h1></h1>
+				</div>
+				<div class="text">
+				Hello {{name}},
+
+				<br>
+				Please verify your email address using the code above to complete account setup.
+				<br>
+				<br>
+				Couldn't verify email? <a href="#">Login</a> here to verify your email.
+				<br>
+				<br>
+				If you did not request this code then there is no further action you need to take. No account will be created.
+				<br>
+				<br>
+				If you are having issues with email verification or creating an account, please contact support.
+				<br>
+				<br>
+
+				Regards,<br>
+				InterviewDeck 
+			
+			
+			</div>
+			</div>
+		</body>
+</html>

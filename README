@@ -1,0 +1,1 @@
+Command to start server session on aws : ssh -i interviewdeck.pem ubuntu@13.233.26.160
