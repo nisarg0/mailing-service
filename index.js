@@ -23,6 +23,7 @@ app.get("/", (req, res) => {
 
 app.post("/send-email", async (req, res) => {
 	try {
+		console.log("Mail request");
 		let response = await emailService.sendotpEmail(
 			"1234",
 			"nisarggogate212@gmail.com",

@@ -1,1 +1,9 @@
 Command to start server session on aws : ssh -i interviewdeck.pem ubuntu@13.233.26.160
+ 
+How to set up putty? 
+-> https://youtu.be/f52IOtTqcP8
+
+
+
+vim abc.txt
+esc : x enter to exit vims

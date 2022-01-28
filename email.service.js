@@ -110,6 +110,7 @@ exports.sendMenteeInterviewSchedule = async (
 	};
 
 	res = await transporter.sendMail(mailOptions);
+	console.log(res);
 	if (res) return "Success";
 	else return "Error";
 };
