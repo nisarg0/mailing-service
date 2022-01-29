@@ -75,6 +75,7 @@ exports.sendMenteeInterviewSchedule = async (
 ) => {
 	var transporter = nodemailer.createTransport({
 		host: config.SMTP,
+		port: 465,
 		auth: {
 			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
@@ -119,7 +120,8 @@ exports.sendMenteeInterviewSchedule = async (
 
 exports.sendMentorlink = async (email, name, start_time, end_time) => {
 	var transporter = nodemailer.createTransport({
-		service: config.SMTP,
+		host: config.SMTP,
+		port: 465,
 		auth: {
 			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
@@ -177,7 +179,8 @@ exports.sendSessionlink = async (
 	link
 ) => {
 	var transporter = nodemailer.createTransport({
-		service: config.SMTP,
+		host: config.SMTP,
+		port: 465,
 		auth: {
 			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
@@ -232,7 +235,8 @@ exports.sendMenteelink = async (
 	link
 ) => {
 	var transporter = nodemailer.createTransport({
-		service: config.SMTP,
+		host: config.SMTP,
+		port: 465,
 		auth: {
 			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
