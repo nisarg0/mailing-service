@@ -42,7 +42,7 @@ exports.sendotpEmail = async (otp, email, name) => {
 	);
 
 	var mailOptions = {
-		from: config.mailjetApikey,
+		from: config.emailId,
 		to: email,
 		subject: "OTP - Interview Deck ",
 		template: "otpmail",
@@ -59,6 +59,7 @@ exports.sendotpEmail = async (otp, email, name) => {
 			img: "cid:logo",
 		},
 	};
+
 	res = await transporter.sendMail(mailOptions);
 	if (res) return "Success";
 	else return "Error";
@@ -73,9 +74,9 @@ exports.sendMenteeInterviewSchedule = async (
 	link
 ) => {
 	var transporter = nodemailer.createTransport({
-		service: "gmail",
+		host: config.SMTP,
 		auth: {
-			user: config.mailjetApikey,
+			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
 		},
 	});
@@ -93,7 +94,7 @@ exports.sendMenteeInterviewSchedule = async (
 	);
 
 	var mailOptions = {
-		from: config.mailjetApikey,
+		from: config.emailId,
 		to: email,
 		subject: "Interview Schedule - Interview Deck ",
 		template: "mentee_interviewschedule",
@@ -118,9 +119,9 @@ exports.sendMenteeInterviewSchedule = async (
 
 exports.sendMentorlink = async (email, name, start_time, end_time) => {
 	var transporter = nodemailer.createTransport({
-		service: "gmail",
+		service: config.SMTP,
 		auth: {
-			user: config.mailjetApikey,
+			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
 		},
 	});
@@ -138,7 +139,7 @@ exports.sendMentorlink = async (email, name, start_time, end_time) => {
 	);
 
 	var mailOptions = {
-		from: config.mailjetApikey,
+		from: config.emailId,
 		to: email,
 		subject: "Mentor Interview Schedule - Interview Deck ",
 		template: "mentor_interviewschedule",
@@ -176,9 +177,9 @@ exports.sendSessionlink = async (
 	link
 ) => {
 	var transporter = nodemailer.createTransport({
-		service: "gmail",
+		service: config.SMTP,
 		auth: {
-			user: config.mailjetApikey,
+			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
 		},
 	});
@@ -196,7 +197,7 @@ exports.sendSessionlink = async (
 	);
 
 	var mailOptions = {
-		from: config.mailjetApikey,
+		from: config.emailId,
 		to: email,
 		subject: "Meeting details - Interview Deck ",
 		template: "sendmeetinglink",
@@ -231,9 +232,9 @@ exports.sendMenteelink = async (
 	link
 ) => {
 	var transporter = nodemailer.createTransport({
-		service: "gmail",
+		service: config.SMTP,
 		auth: {
-			user: config.mailjetApikey,
+			user: config.mailjetApiKey,
 			pass: config.mailjetSecretKey,
 		},
 	});
@@ -251,7 +252,7 @@ exports.sendMenteelink = async (
 	);
 
 	var mailOptions = {
-		from: config.mailjetApikey,
+		from: config.emailId,
 		to: email,
 		subject: "Meeting details - Interview Deck ",
 		template: "mentee_meetinglink",
