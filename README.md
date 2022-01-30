@@ -2,7 +2,12 @@
 
 Best resourse availabe on Internet: https://medium.com/@vijulshah/how-to-send-custom-e-mails-with-node-js-f51e4157542a
 
-##
+## How to use this on your server
+
+```bash
+sudo apt-get install docker.io
+docker run -p -i 8080:8080 nisarg0/email-service
+```
 
 ## Features - Why do we nee this
 
