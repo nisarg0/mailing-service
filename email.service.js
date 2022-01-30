@@ -18,17 +18,17 @@ function getDate(d) {
 	return newdate.replace(",", "    ");
 }
 
-exports.sendotpEmail = async (otp, email, name) => {
-	var transporter = nodemailer.createTransport({
-		host: config.SMTP,
-		port: 465,
-		secure: true,
-		auth: {
-			user: config.mailjetApiKey,
-			pass: config.mailjetSecretKey,
-		},
-	});
+var transporter = nodemailer.createTransport({
+	host: config.SMTP,
+	port: 465,
+	secure: true,
+	auth: {
+		user: config.mailjetApiKey,
+		pass: config.mailjetSecretKey,
+	},
+});
 
+exports.sendotpEmail = async (otp, email, name) => {
 	transporter.use(
 		"compile",
 		hbs({
@@ -73,15 +73,6 @@ exports.sendMenteeInterviewSchedule = async (
 	company,
 	link
 ) => {
-	var transporter = nodemailer.createTransport({
-		host: config.SMTP,
-		port: 465,
-		auth: {
-			user: config.mailjetApiKey,
-			pass: config.mailjetSecretKey,
-		},
-	});
-
 	transporter.use(
 		"compile",
 		hbs({
@@ -119,15 +110,6 @@ exports.sendMenteeInterviewSchedule = async (
 };
 
 exports.sendMentorlink = async (email, name, start_time, end_time) => {
-	var transporter = nodemailer.createTransport({
-		host: config.SMTP,
-		port: 465,
-		auth: {
-			user: config.mailjetApiKey,
-			pass: config.mailjetSecretKey,
-		},
-	});
-
 	transporter.use(
 		"compile",
 		hbs({
@@ -178,15 +160,6 @@ exports.sendSessionlink = async (
 	end_time,
 	link
 ) => {
-	var transporter = nodemailer.createTransport({
-		host: config.SMTP,
-		port: 465,
-		auth: {
-			user: config.mailjetApiKey,
-			pass: config.mailjetSecretKey,
-		},
-	});
-
 	transporter.use(
 		"compile",
 		hbs({
@@ -234,15 +207,6 @@ exports.sendMenteelink = async (
 	company,
 	link
 ) => {
-	var transporter = nodemailer.createTransport({
-		host: config.SMTP,
-		port: 465,
-		auth: {
-			user: config.mailjetApiKey,
-			pass: config.mailjetSecretKey,
-		},
-	});
-
 	transporter.use(
 		"compile",
 		hbs({
