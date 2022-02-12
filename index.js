@@ -23,8 +23,8 @@ app.get("/", (req, res) => {
 
 app.post("/send-email", async (req, res) => {
 	try {
-		var email = "nisarggogate212@gmail.com";
-		var name = "Nisarg";
+		var email = "justadummy71@gmail.com";
+		var name = "Akshay";
 		var start_time = "2022-02-20T20:00:00.000Z";
 		var end_time = "2022-02-20T21:00:00.000Z";
 		var link = "https://meet.google.com/qoc-zdmb-123";
@@ -33,56 +33,56 @@ app.post("/send-email", async (req, res) => {
 		var company = "Google";
 
 		console.log("Mail request");
-		let response = await emailService.sendotpEmail("1234", email, name);
-		if (response === "Success") {
-			console.log("Email Send Successful");
-			return res.status(200).send("Succcess");
-		}
-		response = await emailService.sendPasswordResetEmail(
-			"1234",
-			email,
-			name
-		);
-		if (response === "Success") {
-			console.log("Email Send Successful");
-			return res.status(200).send("Succcess");
-		}
+		// let response = await emailService.sendotpEmail("1234", email, name);
+		// if (response === "Success") {
+		// 	console.log("Email Send Successful");
+		// 	return res.status(200).send("Succcess");
+		// }
+		// response = await emailService.sendPasswordResetEmail(
+		// 	"1234",
+		// 	email,
+		// 	name
+		// );
+		// if (response === "Success") {
+		// 	console.log("Email Send Successful");
+		// 	return res.status(200).send("Succcess");
+		// }
 
-		response = await emailService.sendUserInterviewConfirmation(
-			email,
-			name
-		);
-		if (response === "Success") {
-			console.log("Email Send Successful");
-			return res.status(200).send("Succcess");
-		}
+		// response = await emailService.sendUserInterviewConfirmation(
+		// 	email,
+		// 	name
+		// );
+		// if (response === "Success") {
+		// 	console.log("Email Send Successful");
+		// 	return res.status(200).send("Succcess");
+		// }
 
-		response = await emailService.sendSessionlink(
-			email,
-			name,
-			"How to get into Google",
-			start_time,
-			end_time,
-			link,
-			image_url
-		);
-		if (response === "Success") {
-			console.log("Email Send Successful");
-			return res.status(200).send("Succcess");
-		}
+		// response = await emailService.sendSessionlink(
+		// 	email,
+		// 	name,
+		// 	"How to get into Google",
+		// 	start_time,
+		// 	end_time,
+		// 	link,
+		// 	image_url
+		// );
+		// if (response === "Success") {
+		// 	console.log("Email Send Successful");
+		// 	return res.status(200).send("Succcess");
+		// }
 
-		response = await emailService.sendUserInterviewSchedule(
-			email,
-			name,
-			start_time,
-			end_time,
-			company,
-			link
-		);
-		if (response === "Success") {
-			console.log("Email Send Successful");
-			return res.status(200).send("Succcess");
-		}
+		// response = await emailService.sendUserInterviewSchedule(
+		// 	email,
+		// 	name,
+		// 	start_time,
+		// 	end_time,
+		// 	company,
+		// 	link
+		// );
+		// if (response === "Success") {
+		// 	console.log("Email Send Successful");
+		// 	return res.status(200).send("Succcess");
+		// }
 
 		response = await emailService.sendMentorInterviewSchedule(
 			email,
