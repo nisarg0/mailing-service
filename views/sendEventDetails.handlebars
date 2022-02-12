@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+		* {}
+
+		html,
+		body {
+			background-color: #F5F7FB;
+			margin: 0;
+		}
+
+		div .code {
+			font-family: 'Open Sans', sans-serif;
+			color: #202020;
+			text-align: center;
+			font-size: 16px;
+		}
+		p {
+			margin: 0;
+		}
+		.context {
+			font-size: 12px;
+			padding: 40px 50px 40px 50px;
+			margin: 0 auto;
+		}
+
+		.text {
+			padding-left: 2rem;
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			padding-right: 2rem;
+			background-color: #FFFFFF;
+			font-size: 14px;
+
+		}
+
+		.logo {
+			width: 75%;
+		}
+
+		.button {
+			background-color: #1FA0DB;
+			border: none;
+			color: white;
+			padding: 12px 32px;
+			text-decoration: none;
+			display: inline-block;
+			border-radius: 8px;
+			font-size: 12px;
+			margin: 4px auto 24px;
+			cursor: pointer;
+			transition: transform .3s;
+		}
+		.button:hover {
+			color: #FFFFFF;
+			transform: scale(1.1);
+		}
+
+		.session-img {
+			border: 1px solid #e2e2e2;
+			width: 100%;
+			max-width: 320px;
+			object-fit: cover;
+			border-radius: 12px;
+			aspect-ratio: 16/9;
+			margin: 16px 0px
+		}
+
+		@media(max-width: 600px) {
+			.context {
+				margin-left: 0;
+				margin-right: 0;
+			}
+
+			div .code h1 {
+				font-size: 1.3rem;
+
+			}
+		
+			.text {
+				font-size: 12px;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class='context'>
+		<div class="code">
+			<img class="logo" src="{{img}}"></img>
+		</div>
+		<div class="text">
+			Dear {{name}},
+			<br>
+			<p>Thank you for registering for the session: <span style="color: #444; font-weight: 500;">{{session_name}}</span></p>
+
+			<div style="display: flex;align-items: center;justify-content: center;flex-direction:column">
+				<img class="session-img" src="{{image_url}}" />
+				<p>Session is scheduled from</p>
+				<p style="color: #666; font-weight: 500;margin-bottom: 24px;">{{start_time}} to {{end_time}}</p>
+				<a href="{{link}}" class="button">Join Meeting</a>
+				<p>Event Link : <span style="color: #1fa0db">{{link}}</span></p>
+			</div>
+			<br>
+			<br>
+			Regards,<br>
+			InterviewDeck.
+		</div>
+	</div>
+</body>
+
+</html>
